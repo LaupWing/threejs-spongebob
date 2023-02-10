@@ -14,4 +14,8 @@ export default class Renderer {
          antialias: true
       })
    }
+
+   resize() {
+      this.instance.setSize
+   }
 }
