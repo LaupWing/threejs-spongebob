@@ -19,9 +19,10 @@ export default class Renderer {
       this.camera = this.experience.camera
       this.instance = new THREE.WebGLRenderer({
          canvas: this.canvas,
-         antialias: true
+         antialias: true,
+         alpha: true
       })
-      this.instance.setClearColor("yellow")
+      this.instance.setClearColor(0x177edf, 0.5)
       this.instance.setSize(this.sizes.width, this.sizes.height)
       this.instance.setPixelRatio(Math.min(window.devicePixelRatio, 2))
    }
