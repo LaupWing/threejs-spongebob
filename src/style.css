@@ -6,6 +6,7 @@
 html,
 body {
    overflow: hidden;
+   background: linear-gradient(180deg, #1adbe4 0%, #1595dc 100%);
 }
 
 .webgl {
