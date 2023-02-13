@@ -6,7 +6,7 @@ import Camera from "./Camera"
 export default class Renderer {
    private experience: Experience
    private instance: THREE.WebGLRenderer
-   private scene: THREE.Scene
+   private scene: Experience["scene"]
    private canvas: HTMLCanvasElement
    private sizes: Sizes
    private camera: Camera

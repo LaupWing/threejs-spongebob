@@ -6,7 +6,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 export default class Camera {
    private experience: Experience
    private sizes: Sizes
-   private scene: THREE.Scene
+   private scene: Experience["scene"]
    private canvas: HTMLCanvasElement
    private controls: OrbitControls
    public instance: THREE.PerspectiveCamera
