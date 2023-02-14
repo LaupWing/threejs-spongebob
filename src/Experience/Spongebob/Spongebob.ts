@@ -9,13 +9,12 @@ export default class Spongebob{
 
    constructor(experience: Experience){
       this.scene = experience.scene
-      this.geometry = new THREE.BoxGeometry(1, 1, 1)
+      this.geometry = new THREE.BoxGeometry(0.8, 0.8, 0.4)
       this.material = new THREE.MeshStandardMaterial({
          color: 0xfff463
       }) 
       this.cube = new THREE.Mesh(this.geometry, this.material) 
-      this.cube.scale.z = 0.5
-      this.cube.scale.x = 0.8
+      this.cube.position.y = 0.2
       this.scene.add(this.cube)
    }
 }
