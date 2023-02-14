@@ -9,6 +9,7 @@ export default class Lights {
       this.directionalLight = new THREE.DirectionalLight("#ffffff", 1)
       this.scene = experience.scene
       this.directionalLight.position.set(5, 6, 5)
+      this.directionalLight.intensity = 1.8
       this.scene.add(this.directionalLight)
    }
 }

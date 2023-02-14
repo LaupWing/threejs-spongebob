@@ -11,7 +11,7 @@ export default class Spongebob{
       this.scene = experience.scene
       this.geometry = new THREE.BoxGeometry(1, 1, 1)
       this.material = new THREE.MeshStandardMaterial({
-         color: 0x00ff00
+         color: 0xfff463
       }) 
       this.cube = new THREE.Mesh(this.geometry, this.material) 
       this.scene.add(this.cube)
