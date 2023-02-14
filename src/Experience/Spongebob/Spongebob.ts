@@ -14,6 +14,8 @@ export default class Spongebob{
          color: 0xfff463
       }) 
       this.cube = new THREE.Mesh(this.geometry, this.material) 
+      this.cube.scale.z = 0.5
+      this.cube.scale.x = 0.8
       this.scene.add(this.cube)
    }
 }
