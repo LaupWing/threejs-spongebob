@@ -6,7 +6,7 @@ export default class SpongebobHead {
    public instance: THREE.Mesh
 
    constructor(){
-      this.geometry = new THREE.BoxGeometry(0.8, 0.7, 0.4)
+      this.geometry = new THREE.BoxGeometry(0.8, 0.6, 0.4)
       this.material = new THREE.MeshStandardMaterial({
          color: 0xfff463
       }) 

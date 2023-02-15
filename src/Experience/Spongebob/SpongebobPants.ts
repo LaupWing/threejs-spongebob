@@ -11,6 +11,6 @@ export default class SpongebobPants {
          color: 0xc26c31
       }) 
       this.instance = new THREE.Mesh(this.geometry, this.material) 
-      this.instance.position.y = -0.1
+      this.instance.position.y = -0.05
    }
 }
