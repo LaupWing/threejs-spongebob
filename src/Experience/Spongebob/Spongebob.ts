@@ -4,11 +4,11 @@ import SpongebobBody from "./SpongebobBody"
 
 export default class Spongebob{
    private scene: Experience["scene"]
-   private body
+   private body: SpongebobBody
 
    constructor(experience: Experience){
       this.scene = experience.scene
-      
-      this.scene.add(this.cube)
+      this.body = new SpongebobBody()
+      this.scene.add(this.body.instance)
    }
 }

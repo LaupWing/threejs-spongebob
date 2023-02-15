@@ -3,7 +3,7 @@ import * as THREE from "three"
 export default class SpongebobBody {
    private geometry: THREE.BoxGeometry
    private material: THREE.MeshStandardMaterial
-   private instance: THREE.Mesh
+   public instance: THREE.Mesh
 
    constructor(){
       this.geometry = new THREE.BoxGeometry(0.8, 0.8, 0.4)
