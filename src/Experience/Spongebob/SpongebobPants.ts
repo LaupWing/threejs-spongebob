@@ -6,11 +6,11 @@ export default class SpongebobPants {
    public instance: THREE.Mesh
 
    constructor(){
-      this.geometry = new THREE.BoxGeometry(0.8, 0.3, 0.4)
+      this.geometry = new THREE.BoxGeometry(0.8, 0.2, 0.4)
       this.material = new THREE.MeshStandardMaterial({
          color: 0xc26c31
       }) 
       this.instance = new THREE.Mesh(this.geometry, this.material) 
-      this.instance.position.y = 0
+      this.instance.position.y = -0.1
    }
 }

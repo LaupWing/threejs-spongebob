@@ -17,6 +17,6 @@ export default class Spongebob{
 
       this.scene.add(this.head.instance)
       this.scene.add(this.body.instance)
-      // this.scene.add(this.pants.instance)
+      this.scene.add(this.pants.instance)
    }
 }
