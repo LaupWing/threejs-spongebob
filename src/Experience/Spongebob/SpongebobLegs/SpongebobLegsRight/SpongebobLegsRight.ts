@@ -11,7 +11,7 @@ export default class SpongebobLegsRight {
          color: 0xc26c31
       })
       this.instance = new THREE.Mesh(this.geometry, this.material) 
-      this.instance.position.y = -0.2
+      this.instance.position.y = -0.18
       this.instance.position.x = 0.2
    }
 }
