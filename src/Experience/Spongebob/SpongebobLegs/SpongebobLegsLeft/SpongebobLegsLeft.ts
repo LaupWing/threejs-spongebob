@@ -6,7 +6,7 @@ export default class SpongebobLegsLeft {
    public instance: THREE.Mesh
 
    constructor(){
-      this.geometry = new THREE.CylinderGeometry(0.1, 0.1, 0.1, 16)
+      this.geometry = new THREE.CylinderGeometry(0.1, 0.1, 0.1, 6)
       this.material = new THREE.MeshStandardMaterial({
          color: 0xc26c31
       })

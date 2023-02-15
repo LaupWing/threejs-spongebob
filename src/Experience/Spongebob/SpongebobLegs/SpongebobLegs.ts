@@ -1,12 +1,12 @@
 import * as THREE from "three"
 
-export default class SpongebobLegsRight {
+export default class SpongebobLegsLegs {
    private geometry: THREE.CylinderGeometry
    private material: THREE.MeshStandardMaterial
    public instance: THREE.Mesh
 
    constructor(){
-      this.geometry = new THREE.CylinderGeometry(0.1, 0.1, 0.1, 6)
+      this.geometry = new THREE.CylinderGeometry(0.1, 0.1, 0.1, 8)
       this.material = new THREE.MeshStandardMaterial({
          color: 0xc26c31
       })
