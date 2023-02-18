@@ -19,9 +19,17 @@ export default class SpongebobLegsSock {
          })
       ) 
       this.blueStripe.position.y = 0.05
-      
+
+      const redStripe = new THREE.Mesh(
+         new THREE.CylinderGeometry(0.041, 0.041, 0.02, 6, 1, true), 
+         new THREE.MeshStandardMaterial({
+            color: 0xc23f30
+         })
+      ) 
+      redStripe.position.y = 0.015
       this.instance = new THREE.Group() 
       this.instance.add(this.base)
+      this.instance.add(redStripe)
       this.instance.add(this.blueStripe)
       this.instance.position.y = -0.41
       this.instance.position.x = xPostition
