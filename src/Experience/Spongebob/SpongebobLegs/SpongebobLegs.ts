@@ -8,9 +8,10 @@ export default class SpongebobLegs {
    private upper_l: SpongebobLegsUpper
    private middle_l: SpongebobLegsMiddle
    private sock_l: SpongebobLegsSock
-
+   
    private upper_r: SpongebobLegsUpper
    private middle_r: SpongebobLegsMiddle
+   private sock_r: SpongebobLegsSock
 
    constructor(){
       this.instance = new THREE.Group()
@@ -21,6 +22,7 @@ export default class SpongebobLegs {
       
       this.upper_r = new SpongebobLegsUpper(-0.2)
       this.middle_r = new SpongebobLegsMiddle(-0.2)
+      this.sock_r = new SpongebobLegsSock(-0.2)
 
       this.instance.add(this.upper_l.instance)
       this.instance.add(this.middle_l.instance)
@@ -28,5 +30,6 @@ export default class SpongebobLegs {
 
       this.instance.add(this.upper_r.instance)
       this.instance.add(this.middle_r.instance)
+      this.instance.add(this.sock_r.instance)
    }
 }

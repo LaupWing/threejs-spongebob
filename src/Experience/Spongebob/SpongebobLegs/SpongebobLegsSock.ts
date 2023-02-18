@@ -3,6 +3,7 @@ import * as THREE from "three"
 export default class SpongebobLegsSock {
    private base: THREE.Mesh
    private blueStripe: THREE.Mesh
+   private redStripe: THREE.Mesh
    public instance: THREE.Group
 
    constructor(xPostition:number){  
@@ -20,16 +21,16 @@ export default class SpongebobLegsSock {
       ) 
       this.blueStripe.position.y = 0.05
 
-      const redStripe = new THREE.Mesh(
+      this.redStripe = new THREE.Mesh(
          new THREE.CylinderGeometry(0.041, 0.041, 0.02, 6, 1, true), 
          new THREE.MeshStandardMaterial({
             color: 0xc23f30
          })
       ) 
-      redStripe.position.y = 0.015
+      this.redStripe.position.y = 0.015
       this.instance = new THREE.Group() 
       this.instance.add(this.base)
-      this.instance.add(redStripe)
+      this.instance.add(this.redStripe)
       this.instance.add(this.blueStripe)
       this.instance.position.y = -0.41
       this.instance.position.x = xPostition
