@@ -5,7 +5,6 @@ export default class SpongebobLegsSock {
    private blueStripe: THREE.Mesh
    private redStripe: THREE.Mesh
    public instance: THREE.Group
-
    
    constructor(xPostition:number){  
       const width = 0.04

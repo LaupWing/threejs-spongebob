@@ -1,19 +1,28 @@
 import * as THREE from "three"
 
 export default class SpongebobShoes {
-   private geometry: THREE.CapsuleGeometry
-   private material: THREE.MeshStandardMaterial
-   public instance: THREE.Mesh
+   public instance: THREE.Group
 
    constructor(){
-      this.geometry = new THREE.CapsuleGeometry(0.07, 0.2, 4, 8)
-      this.material = new THREE.MeshStandardMaterial({
+      this.instance = new THREE.Group()
+      this.instance.add(
+         this.createShoe(-0.2),
+         this.createShoe(0.2),
+      )
+   }
+
+   createShoe(offset: number){
+      const geometry = new THREE.CapsuleGeometry(0.07, 0.2, 4, 8)
+      const material = new THREE.MeshStandardMaterial({
          color: 0x000000
       }) 
-      this.instance = new THREE.Mesh(this.geometry, this.material) 
-      this.instance.position.y = -0.55
-      this.instance.position.x = -0.2
-      this.instance.position.z = 0.05
-      this.instance.rotation.x = Math.PI / 2
+      const mesh = new THREE.Mesh(geometry, material) 
+      
+      mesh.position.y = -0.55
+      mesh.rotation.x = Math.PI / 2
+      mesh.position.x = offset
+      mesh.position.z = 0.07
+
+      return mesh
    }
 }
