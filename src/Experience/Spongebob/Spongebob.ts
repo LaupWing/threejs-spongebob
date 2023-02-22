@@ -1,4 +1,5 @@
 import Experience from "../Experience"
+import SpongebobArms from "./SpongebobArms/SpongebobArms"
 import SpongebobBody from "./SpongebobBody"
 import SpongebobEyes from "./SpongebobEyes/SpongebobEyes"
 import SpongebobHead from "./SpongebobHead"
@@ -14,6 +15,7 @@ export default class Spongebob{
    private legs: SpongebobLegs
    private shoes: SpongebobShoes
    private eyes: SpongebobEyes
+   private arms: SpongebobArms
 
    constructor(experience: Experience){
       this.scene = experience.scene
@@ -23,6 +25,7 @@ export default class Spongebob{
       this.legs = new SpongebobLegs()
       this.shoes = new SpongebobShoes()
       this.eyes = new SpongebobEyes()
+      this.arms = new SpongebobArms()
 
       this.scene.add(this.head.instance)
       this.scene.add(this.body.instance)
@@ -30,5 +33,6 @@ export default class Spongebob{
       this.scene.add(this.legs.instance)
       this.scene.add(this.shoes.instance)
       this.scene.add(this.eyes.instance)
+      this.scene.add(this.arms.instance)
    }
 }
