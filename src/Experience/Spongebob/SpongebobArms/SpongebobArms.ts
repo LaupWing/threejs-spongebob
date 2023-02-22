@@ -6,19 +6,14 @@ export default class SpongebobArms {
    constructor(){
       this.instance = new THREE.Group()
       this.instance.add(
-         this.createSclera(0.4)
+         this.createUpper(0.45),
+         this.createUpper(-0.45),
       )
    }
 
-   createSclera(offset: number){
-      const geometry = new THREE.SphereGeometry(
-         0.13, 
-         32, 
-         16, 
-         0,
-         Math.PI * 2,
-         Math.PI /2,
-         // Math.PI
+   createUpper(offset: number){
+      const geometry = new THREE.CapsuleGeometry(
+         0.07, 0.06, 4, 8
       )
       const material = new THREE.MeshStandardMaterial({
          color: 0xfbfff7,
@@ -26,7 +21,7 @@ export default class SpongebobArms {
       }) 
       const mesh = new THREE.Mesh(geometry, material) 
       
-      mesh.position.y = 0.4
+      mesh.position.y = 0.25
       mesh.position.x = offset
       mesh.position.z = 0
       // mesh.scale.z = 0.5
